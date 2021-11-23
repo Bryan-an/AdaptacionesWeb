@@ -1,0 +1,59 @@
+html {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Shippori Antique B1", sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+
+.follow-us img {
+  max-width: 50px;
+}
+
+.form-container {
+  width: 250px;
+  margin: auto;
+}
+
+.form-container input,
+.form-container label {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: fr fr;
+}
+
+.product-container {
+  margin: 20px;
+  background-color: #fef5e7;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1,
+h2 {
+  color: #dc7633;
+  border-bottom: 5px solid #dc7633;
+}
+
+.price {
+  display: flex;
+}
+
+.price div {
+  padding: 20px;
+}
+
+.price p {
+  text-align: center;
+}

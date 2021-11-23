@@ -1,0 +1,29 @@
+h1{
+  text-align: center;
+  color:red;
+}
+h2{
+  text-align: left;
+  color:red;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  grid-gap: 15px;
+  text-align: center;
+}
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(80px, auto);
+  grid-gap: 15px;
+  text-align: center;
+}
+
+.grid-item {
+  border: 1px solid black;
+}
+
+
