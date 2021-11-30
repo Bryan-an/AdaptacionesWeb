@@ -1,0 +1,147 @@
+* {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Shippori Antique B1", sans-serif;
+  text-align: justify;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fdebd0;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #f8c471;
+}
+
+h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 5rem;
+  color: #e67e22;
+}
+
+.active-nav {
+  animation: activate 1.5s ease 1 forwards;
+  color: #fff;
+}
+
+main {
+  padding: 0px 200px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border-bottom: 2px solid #f8c471;
+  padding: 8px;
+}
+
+th {
+  background-color: #fdebd0;
+}
+
+tr:nth-child(even) {
+  background-color: #fdebd0;
+}
+
+article {
+  margin: 50px 0;
+  padding-top: 50px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-image: linear-gradient(
+    to right,
+    rgba(230, 126, 34, 0),
+    rgba(230, 126, 34, 1)
+  );
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 337px;
+  padding: 15px;
+}
+
+header h1 {
+  background-image: radial-gradient(#f2f3f4, transparent 70%);
+}
+
+h4 {
+  margin: 0;
+}
+
+main img {
+  width: 50%;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.img-left {
+  float: left;
+  padding-right: 50px;
+}
+.img-right {
+  float: right;
+  padding-left: 50px;
+}
+
+@keyframes activate {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #e67e22;
+  }
+}

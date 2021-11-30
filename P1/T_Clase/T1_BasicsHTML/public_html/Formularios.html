@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+  <head>
+    <title>Formularios</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div align="center">
+      <h1>Menú principal</h1>
+      <a href="index.html">Ir al inicio</a><br />
+      <a href="Enlaces.html">Ir a enlaces</a><br />
+      <a href="Imagenes.html">Ir a Imágenes</a><br />
+      <a href="Estilos.html">Ir a Estilos</a><br />
+      <a href="Formatos.html">Ir a Formatos</a><br />
+      <a href="TrabajoEnClase.html">Ir a Trabajo en clase</a><br />
+      <a href="Tablas.html">Ir a tablas</a><br />
+      <a href="Formularios.html">Ir a formularios</a><br />
+    </div>
+    <div align="center">
+      <h2>Datos personales</h2>
+      <form>
+        <label>Cédula:</label><br />
+        <input type="text" id="cc" required /><br />
+        <label>Nombres:</label><br />
+        <input type="text" id="nom" /><br />
+        <label>Apellidos:</label><br />
+        <input type="text" id="apellidos" /><br />
+        <label>Edad:</label><br />
+        <input type="number" id="edad" min="0" max="100" /><br />
+        <label>Fecha de nacimiento:</label><br />
+        <input type="date" id="fNacimiento" /><br />
+        <label>Correo:</label><br />
+        <input type="email" id="correo" /><br />
+        <select id="cirdades">
+          <option value="uio">Quito</option>
+          <option value="gye">Guayaquil</option></select
+        ><br />
+        <input type="submit" value="Enviar datos" /><br />
+        <input type="button" value="Enviar datos" /><br />
+        <button>Enviar datos</button>
+      </form>
+      <hr />
+
+      <h2>Datos vehiculares</h2>
+      <form>
+        <label>Matrícula:</label><br />
+        <input type="text" id="matricula" /><br />
+        <label>Modelo:</label><br />
+        <input type="text" id="modelo" /><br />
+        <label>Marca:</label><br />
+        <input type="text" id="marca" /><br />
+        <label>Color:</label><br />
+        <input type="color" id="color" /><br />
+        <label>Año:</label><br />
+        <input type="number" id="año" min="1700" max="2022" /><br />
+        <label>Chasis (VIN):</label><br />
+        <input type="text" id="vin" /><br />
+        <label>Concesionario:</label><br />
+        <input type="text" id="concesioinario" /><br />
+        <input type="button" value="Enviar Datos" />
+      </form>
+      <h2>Datos del postulante</h2>
+      <fieldset>
+        <legend align="center">Ingresar datos</legend>
+        <form>
+          <table>
+            <tr>
+              <td>
+                <label>Cédula</label>
+              </td>
+              <td>
+                <input type="text" id="cedula" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Nombres</label>
+              </td>
+              <td>
+                <input type="text" id="nombres" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Apellidos</label>
+              </td>
+              <td>
+                <input type="text" id="apellidos" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Correo</label>
+              </td>
+              <td>
+                <input type="email" id="correoP" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Dirección</label>
+              </td>
+              <td>
+                <textarea id="dir"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Último estudio</label>
+              </td>
+              <td>
+                <select id="uEstudio">
+                  <option value="ing">Ingeniería</option>
+                  <option value="msc">Maestría en ciencias</option>
+                  <option value="mgt">Maestría profesionalizante</option>
+                  <option value="phd">Doctorado en filosofía</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button>Registrar</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </fieldset>
+
+      <h2>Datos vehiculares</h2>
+      <form>
+        <table>
+          <tr>
+            <td>
+              <label>Matrícula:</label>
+            </td>
+            <td>
+              <input type="text" id="matricula" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Modelo:</label>
+            </td>
+            <td>
+              <input type="text" id="modelo" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Marca:</label>
+            </td>
+            <td>
+              <input type="text" id="marca" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Color:</label>
+            </td>
+            <td>
+              <input type="color" id="color" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Año:</label>
+            </td>
+            <td>
+              <input type="number" id="año" min="1700" max="2022" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Chasis (VIN):</label>
+            </td>
+            <td>
+              <input type="text" id="vin" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Concesionario:</label>
+            </td>
+            <td>
+              <input type="text" id="concesioinario" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button>Registrar</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
