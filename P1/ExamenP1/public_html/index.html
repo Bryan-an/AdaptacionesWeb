@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" href="img/itsqmet.ico" />
+    <title>Examen Primer Parcial</title>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tbody>
+          <tr>
+            <th class="title" colspan="4">DIRECCIÓN DOMICILIARIA Y CONTACTO</th>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="province">Provincia Domicilio(*):</label>
+            </td>
+            <td>
+              <select name="province" id="province" required>
+                <option value="PICHINCHA">PICHINCHA</option>
+                <option value="GUAYAS">GUAYAS</option>
+                <option value="AZUAY">AZUAY</option>
+                <option value="CAÑAR">CAÑAR</option>
+                <option value="LOJA">LOJA</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="canton">Cantón Domicilio(*):</label>
+            </td>
+            <td>
+              <select name="canton" id="canton" required>
+                <option value="QUITO">QUITO</option>
+                <option value="CAYAMBE">CAYAMBE</option>
+                <option value="MEJIA">MEJÍA</option>
+                <option value="PEDRO-MONCAYO">PEDRO MONCAYO</option>
+                <option value="PUERTO-QUITO">PUERTO QUITO</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="address">Dirección Domiciliaria(*):</label>
+            </td>
+            <td>
+              <textarea name="address" id="address" required></textarea>
+            </td>
+            <td class="label">
+              <label for="contact-address">Dirección Alterna/Contacto:</label>
+            </td>
+            <td>
+              <textarea
+                name="contact-address"
+                id="contact-address"
+                required
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="phone">Teléfono(*):</label>
+            </td>
+            <td>
+              <input type="text" id="phone" required />
+            </td>
+            <td class="label">
+              <label for="cellphone">Celular(*):</label>
+            </td>
+            <td>
+              <input type="text" id="cellphone" required />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="email">Correo Electrónico(*):</label>
+            </td>
+            <td>
+              <input type="email" id="email" required />
+            </td>
+            <td class="label">
+              <label for="institutional-email"
+                >Correo Electrónico Institucional:</label
+              >
+            </td>
+            <td>
+              <input type="email" id="institutional-email" />
+            </td>
+          </tr>
+          <tr>
+            <th class="title" colspan="4">PROCEDENCIA EDUCATIVA</th>
+          </tr>
+          <tr>
+            <th class="label" colspan="2">INSTRUCCIÓN SECUNDARIA</th>
+            <th class="label" colspan="2">INSTRUCCIÓN SUPERIOR (POSTGRADOS)</th>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="institution">Institución Educativa(*):</label>
+            </td>
+            <td>
+              <input type="text" id="institution" required />
+            </td>
+            <td class="label">
+              <label for="superior-institution"
+                >Institución Educativa Superior(*):</label
+              >
+            </td>
+            <td>
+              <input type="text" id="superior-institution" required />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="degree">Título(*):</label>
+            </td>
+            <td>
+              <select name="degree" id="degree" required>
+                <option value="system-engineer">INGENIERO EN SISTEMAS</option>
+                <option value="software-engineer">INGENIERO EN SOFTWARE</option>
+                <option value="system-analyst">ANALÍSTA DE SISTEMAS</option>
+                <option value="electronic-engineer">
+                  INGENIERO ELECTRÓNICO
+                </option>
+                <option value="automotive-engineer">
+                  INGENIERO AUTOMOTRIZ
+                </option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="superior-degree">Título Superior:</label>
+            </td>
+            <td>
+              <select name="superior-degree" id="superior-degree">
+                <option value="lawyer">ABOGADO</option>
+                <option value="software-engineer">INGENIERO EN SOFTWARE</option>
+                <option value="system-analyst">ANALÍSTA DE SISTEMAS</option>
+                <option value="electronic-engineer">
+                  INGENIERO ELECTRÓNICO
+                </option>
+                <option value="automotive-engineer">
+                  INGENIERO AUTOMOTRIZ
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="institution-type">Tipo Institución:</label>
+            </td>
+            <td>
+              <input type="text" id="institution-type" />
+            </td>
+            <td class="label">
+              <label for="superior-institution-type">Tipo Institución:</label>
+            </td>
+            <td>
+              <input type="text" id="superior-institution-type" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="instruction-level">Nivel de Instrucción:</label>
+            </td>
+            <td>
+              <select name="instruction-level" id="instruction-level">
+                <option value="basic">BÁSICA</option>
+                <option value="middle">MEDIA</option>
+                <option value="superior">SUPERIOR</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="superior-instruction-level"
+                >Nivel de Instrucción:</label
+              >
+            </td>
+            <td>
+              <select
+                name="superior-instruction-level"
+                id="superior-instruction-level"
+              >
+                <option value="basic">BÁSICA</option>
+                <option value="middle">MEDIA</option>
+                <option value="superior">SUPERIOR</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="country">País:</label>
+            </td>
+            <td>
+              <input type="text" id="country" />
+            </td>
+            <td class="label">
+              <label for="superior-country">País:</label>
+            </td>
+            <td>
+              <input type="text" id="superior-country" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="province">Provincia:</label>
+            </td>
+            <td>
+              <input type="text" id="province" />
+            </td>
+            <td class="label">
+              <label for="superior-province">Provincia:</label>
+            </td>
+            <td>
+              <input type="text" id="superior-province" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="canton">Cantón:</label>
+            </td>
+            <td>
+              <input type="text" id="canton" />
+            </td>
+            <td class="label">
+              <label for="superior-canton">Cantón:</label>
+            </td>
+            <td>
+              <input type="text" id="superior-canton" />
+            </td>
+          </tr>
+          <tr>
+            <th class="title" colspan="4">INSTRUCCIÓN FAMILIAR</th>
+          </tr>
+          <tr>
+            <th class="label" colspan="2">INSTRUCCIÓN PADRE</th>
+            <th class="label" colspan="2">INSTRUCCIÓN MADRE</th>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="father-academic-level">
+                Nivel Formación Académica(*):
+              </label>
+            </td>
+            <td>
+              <select
+                name="father-academic-level"
+                id="father-academic-level"
+                required
+              >
+                <option value="incomplete-superior">
+                  SUPERIOR NO UNIVERSITARIA INCOMPLETA
+                </option>
+                <option value="basic">BÁSICA</option>
+                <option value="middle">MEDIA</option>
+                <option value="superior">SUPERIOR</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="mother-academic-level">
+                Nivel Formación Académica(*):
+              </label>
+            </td>
+            <td>
+              <select
+                name="mother-academic-level"
+                id="mother-academic-level"
+                required
+              >
+                <option value="postgraduate">POSGRADO MAESTRÍA</option>
+                <option value="incomplete-superior">
+                  SUPERIOR NO UNIVERSITARIA INCOMPLETA
+                </option>
+                <option value="basic">BÁSICA</option>
+                <option value="middle">MEDIA</option>
+                <option value="superior">SUPERIOR</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br /><br /><br />
+      <table>
+        <thead>
+          <tr>
+            <th class="title" colspan="4">INFORMACIÓN PERSONAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2"></td>
+            <td colspan="2">
+              <img src="./img/user.png" alt="avatar" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="code">Código Único:</label>
+            </td>
+            <td>
+              <input type="text" id="code" />
+            </td>
+            <td class="label">
+              <label for="document"
+                >No. del Documento C.I. / Pasaporte(*):</label
+              >
+            </td>
+            <td>
+              <input type="text" id="document" required />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="last-names">Apellidos(*):</label>
+            </td>
+            <td>
+              <input type="text" id="last-names" required />
+            </td>
+            <td class="label">
+              <label for="names">Nombres(*):</label>
+            </td>
+            <td>
+              <input type="text" id="names" required />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="birthdate">Fecha de nacimiento(*): [dd/MM/yyy]</label>
+            </td>
+            <td>
+              <input type="date" id="birthdate" required />
+            </td>
+            <td class="label">
+              <label for="civil-status">Estado Civil(*):</label>
+            </td>
+            <td>
+              <select name="civil-status" id="civil-status" required>
+                <option value="single">Soltero</option>
+                <option value="married">Casado</option>
+                <option value="divorced">Divorciado</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="gender">Género (*):</label>
+            </td>
+            <td>
+              <select name="gender" id="gender" required>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+              </select>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="birth-country">País de nacimiento (*):</label>
+            </td>
+            <td>
+              <select name="birth-country" id="birth-country" required>
+                <option value="ecuador">ECUADOR</option>
+                <option value="colombia">COLOMBIA</option>
+                <option value="peru">PERÚ</option>
+                <option value="argentina">ARGENTINA</option>
+                <option value="usa">ESTADOS UNIDOS</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="birth-province">Provincia de nacimiento:</label>
+            </td>
+            <td>
+              <select name="birth-province" id="birth-provinces">
+                <option value="PICHINCHA">PICHINCHA</option>
+                <option value="GUAYAS">GUAYAS</option>
+                <option value="AZUAY">AZUAY</option>
+                <option value="CAÑAR">CAÑAR</option>
+                <option value="LOJA">LOJA</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="birth-canton">Cantón de nacimiento:</label>
+            </td>
+            <td>
+              <select name="birth-canton" id="birth-canton">
+                <option value="QUITO">QUITO</option>
+                <option value="CAYAMBE">CAYAMBE</option>
+                <option value="MEJIA">MEJÍA</option>
+                <option value="PEDRO-MONCAYO">PEDRO MONCAYO</option>
+                <option value="PUERTO-QUITO">PUERTO QUITO</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="militar-id">Cédula militar</label>
+            </td>
+            <td>
+              <input type="text" id="militar-id" />
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <img src="img/conadis.jpg" alt="CONADIS" />
+              <label for="disability">Discapacidad:</label>
+            </td>
+            <td>
+              <input type="radio" name="disability" id="yes" value="yes" />SI
+              <input type="radio" name="disability" id="no" value="no" />NO
+            </td>
+            <td colspan="2">
+              (En caso de disponer carné de CONADIS, acérquese a BIENESTAR
+              ESTUDIANTIL con copia legible del carné para su registro)
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">
+              <label for="ethnicity">Etnia (*):</label>
+            </td>
+            <td>
+              <select name="ethnicity" id="ethnicity" required>
+                <option value="mestizo">MESTIZO/A</option>
+                <option value="black">NEGRO</option>
+                <option value="white">BLANCO</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="nationality-ethnicity">Nacionalidad Etnia(*):</label>
+            </td>
+            <td>
+              <select
+                name="nationality-ethnicity"
+                id="nationality-ethnicity"
+                required
+              >
+                <option value="ecuador">ECUADOR</option>
+                <option value="colombia">COLOMBIA</option>
+                <option value="peru">PERÚ</option>
+                <option value="argentina">ARGENTINA</option>
+                <option value="usa">ESTADOS UNIDOS</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="label">
+              <label for="career-financing"
+                >Origen Financiamiento Carrera (*):</label
+              >
+            </td>
+            <td>
+              <select name="career-financing" id="career-financing" required>
+                <option value="own-resources">RECURSOS PROPIOS</option>
+                <option value="lending">PRÉSTAMO</option>
+              </select>
+            </td>
+            <td class="label">
+              <label for="educative-credit">Valor Crédito educativo (*):</label>
+            </td>
+            <td>
+              <input type="number" id="educative-credit" /><br />
+              <span>(Ejem: 4000,25 ó 4000.25)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
