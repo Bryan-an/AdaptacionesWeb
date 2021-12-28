@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div align="center" class="container">
+      <h2>Datos personales</h2>
+      <form>
+        <table>
+          <tr>
+            <td>
+              <label>Cédula / RUC:</label>
+            </td>
+            <td>
+              <input type="text" id="cc" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Nombres:</label>
+            </td>
+            <td>
+              <input type="text" id="nom" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Apellidos:</label>
+            </td>
+            <td>
+              <input type="text" id="ape" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Fecha de nacimiento:</label>
+            </td>
+            <td>
+              <input type="date" id="fecNac" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Correo:</label>
+            </td>
+            <td>
+              <input type="email" id="correo" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Dirección:</label>
+            </td>
+            <td>
+              <textarea id="dir"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Contactos:</label>
+            </td>
+            <td>
+              <input type="text" id="con0" required />
+              <div id="addContacto"></div>
+              <input
+                type="button"
+                value="Agregar otro contacto"
+                onclick="addCont()"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input
+                class="btn btn-primary"
+                type="button"
+                value="Guardar"
+                onclick="capturar()"
+              />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div class="container">
+      <div id="resp"></div>
+    </div>
+
+    <script>
+      function capturar() {
+        var cedula = document.getElementById("cc").value;
+        var nombres = document.getElementById("nom").value;
+        var apellidos = document.getElementById("ape").value;
+        var fNac = document.getElementById("fecNac").value;
+        var correo = document.getElementById("correo").value;
+        var dir = document.getElementById("dir").value;
+
+        document.getElementById("resp").innerHTML =
+          "<h3>Cédula:</h3>" + cedula + "<br> ";
+        document.getElementById("resp").innerHTML +=
+          "<h3>Nombres:</h3>" + nombres + "<br> ";
+        document.getElementById("resp").innerHTML +=
+          "<h3>Apellidos:</h3>" + apellidos + "<br> ";
+        document.getElementById("resp").innerHTML +=
+          "<h3>Fecha de nacimiento:</h3>" + fNac + "<br> ";
+        document.getElementById("resp").innerHTML +=
+          "<h3>Correo:</h3>" + correo + "<br> ";
+        document.getElementById("resp").innerHTML +=
+          "<h3>Dirección:label</h3>" + dir + "<br> ";
+      }
+
+      var contadorContacto = 1;
+      var valor = {};
+      var i = 0;
+
+      function addCont() {
+        var x = 1;
+
+        if (contadorContacto >= 2) {
+          // valor[i] = document.getElementById(
+          //   "con" + (contadorContacto - 1)
+          // ).value;
+          // i++;
+          // for (let y = 0; y < contadorContacto - 1; y++) {
+          //   valor[y] = document.getElementById("con" + x).value;
+          //   x++;
+          // }
+          // i++;
+          i++;
+          for (let y = 0; y < i; y++) {
+            valor[y] = document.getElementById("con" + x).value;
+            x++;
+          }
+        }
+
+        x = 1;
+
+        var entradaContacto =
+          '<input type="text" id="con' + contadorContacto + '" required/><br>';
+
+        document.getElementById("addContacto").innerHTML += entradaContacto;
+        for (let y = 0; y < i; y++) {
+          if (x <= contadorContacto) {
+            document.getElementById("con" + x).value = valor[y];
+            x++;
+          }
+          // integer overflow
+          // 2^32
+          // [2^32 - 1] [2^32 = 0] [2^32 + 1]
+        }
+        contadorContacto++;
+      }
+
+      /* function addCont() {
+        const fragment = document.createDocumentFragment();
+        const input = document.createElement("input");
+        const br = document.createElement("br");
+
+        input.type = "text";
+        input.id = `con${contadorContacto}`;
+        input.required = true;
+
+        fragment.appendChild(input);
+        fragment.appendChild(br);
+
+        contadorContacto++;
+
+        document.getElementById("addContacto").appendChild(fragment);
+      } */
+    </script>
+  </body>
+</html>
