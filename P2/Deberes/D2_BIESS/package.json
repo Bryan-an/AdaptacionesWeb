@@ -1,0 +1,19 @@
+{
+  "name": "d2-biess",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Bryan",
+  "contributors": [],
+  "scripts": {
+    "start": "tsc public_html/src/index.ts"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}

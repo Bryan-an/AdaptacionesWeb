@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario Cesar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container" align="center">
+      <h1>Cifrado Cesar</h1>
+      <table>
+        <tr>
+          <td>
+            <label>Ingresa el texto:</label>
+          </td>
+          <td>
+            <input type="text" id="textoO" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Ingresa el clave:</label>
+          </td>
+          <td>
+            <input type="number" id="clave" />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button onclick="cifrar()" class="btn btn-primary">Cifrar</button>
+          </td>
+        </tr>
+      </table>
+
+      <h1>Descifrado Cesar</h1>
+      <table>
+        <tr>
+          <td>
+            <label>Ingresa cifrado:</label>
+          </td>
+          <td>
+            <input type="text" id="textoC" readonly />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Ingresa el clave:</label>
+          </td>
+          <td>
+            <input type="number" id="claveC" />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button onclick="descifrar()" class="btn btn-primary">
+              Descifrar
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      var abc = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "ñ",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+      ];
+
+      function cifrar() {
+        var texto = document.getElementById("textoO").value;
+        var textoArr = texto.split(""); //lo fragmenta letra por letra
+        var clave = document.getElementById("clave").value;
+        clave = parseInt(clave);
+        var textCifrado = "";
+
+        if (clave % abc.length === 0) {
+          clave += 6;
+        }
+
+        for (var i = 0; i < textoArr.length; i++) {
+          if (textoArr[i] === " ") {
+            textCifrado += " ";
+            continue;
+          }
+
+          for (var j = 0; j < abc.length; j++) {
+            if (textoArr[i] === abc[j]) {
+              var temp = j + clave;
+              while (temp >= abc.length) {
+                temp = temp - abc.length;
+              }
+              textCifrado += abc[temp];
+
+              // if (j + clave >= abc.length) {
+              //   textCifrado += abc[j + clave - abc.length];
+              // } else {
+              //   textCifrado += abc[j + clave];
+              // }
+            }
+          }
+        }
+
+        document.getElementById("textoC").value = textCifrado;
+      }
+
+      function descifrar() {
+        let textoCifrado = document.getElementById("textoC").value;
+        let clave = parseInt(document.getElementById("claveC").value);
+        let textoOriginal = "";
+
+        if (clave % abc.length === 0) {
+          clave += 6;
+        }
+
+        for (var i = 0; i < textoCifrado.length; i++) {
+          if (textoCifrado[i] === " ") {
+            textoOriginal += " ";
+            continue;
+          }
+
+          for (var j = 0; j < abc.length; j++) {
+            if (textoCifrado[i] === abc[j]) {
+              let temp = j - clave;
+
+              while (temp < 0) {
+                temp = temp + abc.length;
+              }
+
+              textoOriginal += abc[temp];
+
+              // if (j - clave < 0) {
+              //   textoOriginal += abc[j - clave + abc.length];
+              // } else {
+              //   textoOriginal += abc[j - clave];
+              // }
+            }
+          }
+        }
+
+        alert(textoOriginal);
+      }
+    </script>
+  </body>
+</html>
